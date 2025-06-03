@@ -13,9 +13,9 @@ type prop={
     params:{id:string};
 };
 
-export default function singlePost({params}:prop){
+export default function SinglePost({params}:prop){
     const[comment,setComment]=useState('');
-    const[allComments,setAllComments]=useState<String[]>([]);
+    const[allComments,setAllComments]=useState<string[]>([]);
     const blog=blogs.find((b)=>b.id.toString()===params.id) ;
     const handleCommentSubmit =()=>{
         if(comment.trim()){
